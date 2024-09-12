@@ -4,9 +4,9 @@ import 'package:movie_app/api/constants.dart';
 import 'package:movie_app/models/movie_model.dart';
 
 class Api {
-  final upcomingApiUrl = "https://api.themoviedb.org/3/movie/upcoming?api_key=$apiKey";
-  final popularApiUrl = "https://api.themoviedb.org/3/movie/popular?api_key=$apiKey";
-  final topRatedApiUrl = "https://api.themoviedb.org/3/movie/top_rated?api_key=$apiKey";
+  final upcomingApiUrl = upcomingApiUrlWithKey;
+  final popularApiUrl = popularApiUrlWithKey;
+  final topRatedApiUrl = topRatedApiUrlWithKey;
 
   Future<List<Movie>> getUpcomingMovies() async{
     final response = await http.get(Uri.parse(upcomingApiUrl));
