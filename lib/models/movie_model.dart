@@ -3,14 +3,14 @@ class Movie {
   final String backdropPath;
   final String overview;
   final String posterPath;
-  // final String voting;
+  final double voting;
 
   Movie(
       {required this.title,
       required this.backdropPath,
       required this.overview,
       required this.posterPath,
-      // required this.voting
+      required this.voting
       });
 
   factory Movie.fromMap(Map<String, dynamic> map) {
@@ -19,7 +19,7 @@ class Movie {
         backdropPath: map['backdrop_path'],
         overview: map['overview'],
         posterPath: map['poster_path'],
-        // voting: map['vote_average']
+        voting: map['vote_average']
         );
   }
 
@@ -29,7 +29,7 @@ class Movie {
       'backfropPath': backdropPath,
       'overview': overview,
       'posterPath': posterPath,
-      // 'voting': voting
+      'voting': voting
     };
   }
 }
